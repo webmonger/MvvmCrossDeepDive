@@ -15,709 +15,104 @@ namespace MvvmCrossMenu.Services
 			{
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 1",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
+					Title = "Item 2",
+					ViewType = MenuType.SecondView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 3",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 4",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 5",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 6",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 7",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 8",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 9",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 10",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 11",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 12",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 13",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 14",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 15",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 16",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 17",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 18",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 19",
 					ViewType = MenuType.FirstView
 				},
 				new MenuItem()
 				{
-					Title = "First View",
+					Title = "Item 20",
 					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
-				new MenuItem()
-				{
-					Title = "First View",
-					ViewType = MenuType.FirstView
-				},
+				}
 			};
 		}
 	}

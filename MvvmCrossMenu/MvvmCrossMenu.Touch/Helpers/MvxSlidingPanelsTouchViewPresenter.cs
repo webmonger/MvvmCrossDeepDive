@@ -9,7 +9,7 @@ using SlidingPanels.Lib.PanelContainers;
 
 namespace MvvmCrossMenu.Touch.Helpers
 {
-	public class MvxSlidingPanelsTouchViewPresenter : MvxTouchViewPresenter
+	public class MvxSlidingPanelsTouchViewPresenter : MvxModalSupportTouchViewPresenter
 	{
 		#region Data Members
 

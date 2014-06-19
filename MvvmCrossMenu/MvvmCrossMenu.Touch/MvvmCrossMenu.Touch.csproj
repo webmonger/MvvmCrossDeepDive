@@ -152,6 +152,27 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.File.Touch">
       <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
     </Reference>
+    <Reference Include="System.IO">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.Color.Touch.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Images\NavBar\BurgerMenu.png" />
@@ -194,10 +215,14 @@
     <Compile Include="Views\TableViewCells\MenuCollectionViewCell.designer.cs">
       <DependentUpon>MenuCollectionViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\LineLayout.cs" />
-    <Compile Include="Helpers\DecoratedFlowLayout.cs" />
-    <Compile Include="Helpers\CardLayoutFlow.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Views\TableViewCells\BookCell.cs" />
+    <Compile Include="Views\TableViewCells\BookCell.designer.cs">
+      <DependentUpon>BookCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Views\BookInfoView.cs" />
+    <Compile Include="Views\BookToColourConverter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -230,6 +255,7 @@
     <InterfaceDefinition Include="Views\FirstView_iPhone.xib" />
     <InterfaceDefinition Include="Views\FirstView_iPad.xib" />
     <InterfaceDefinition Include="Views\TableViewCells\MenuCollectionViewCell.xib" />
+    <InterfaceDefinition Include="Views\TableViewCells\BookCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

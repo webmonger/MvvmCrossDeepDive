@@ -8,7 +8,7 @@ namespace MvvmCrossMenu.Core
         public override void Initialize()
         {
 			CreatableTypes(typeof(IMenuService).Assembly)
-                .EndingWith("Service")
+				.EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 				

@@ -1,10 +1,13 @@
 ﻿using System.Drawing;
+using System;
 using Cirrious.CrossCore.Exceptions;
 using Cirrious.MvvmCross.Touch.Views;
 using MonoTouch.UIKit;
 using MvvmCrossMenu.Touch.Views;
 using SlidingPanels.Lib;
 using SlidingPanels.Lib.PanelContainers;
+using Cirrious.MvvmCross.Touch.Views;
+using MvvmCrossMenu.Core;
 
 namespace MvvmCrossMenu.Touch.Helpers
 {
@@ -64,6 +67,13 @@ namespace MvvmCrossMenu.Touch.Helpers
 			};
 
 			return new UIBarButtonItem(button);
+		}
+
+		public override void Close (Cirrious.MvvmCross.ViewModels.IMvxViewModel toClose)
+		{
+			if (toClose is BookInfoViewModel) {
+				MasterNavigationController.DismissViewController (true, null);
+			}
 		}
 	}
 }

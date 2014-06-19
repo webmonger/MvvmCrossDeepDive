@@ -8,6 +8,7 @@
 
 	public enum MenuType{
 		FirstView,
+		SecondView,
 		Unknown,
 	}
 }

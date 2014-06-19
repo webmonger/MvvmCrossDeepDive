@@ -35,12 +35,6 @@ namespace MvvmCrossMenu.Touch.Views
 		{
 			base.ViewDidLoad();
 
-
-			//UserImage.Layer.
-			UserImage.Image = FromUrl ("http://www.gravatar.com/avatar/c2cc5c75190b2fe3f53c65a9d5df101b?s=75");
-			UserImage.Layer.CornerRadius = UserImage.Image.Size.Width / 2;
-			UserImage.Layer.MasksToBounds = true;
-
 			MenuCollectionView.RegisterNibForCell(MenuCollectionViewCell.Nib, MenuCollectionViewCell.Key);
 			var source = new MvxCollectionViewSource (MenuCollectionView, MenuCollectionViewCell.Key);
 			MenuCollectionView.Source = source;
