@@ -1,8 +1,8 @@
-﻿using System;
-using System.Drawing;
+using System;
+using CoreGraphics;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using MvvmCrossMenu.Models;

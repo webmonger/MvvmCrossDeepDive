@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using System.Drawing;
+using Foundation;
+using UIKit;
+using CoreGraphics;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using MvvmCrossMenu.Touch.Views.TableViewCells;
 
@@ -17,19 +17,11 @@ namespace MvvmCrossMenu.Touch.Views
 
 		}
 
-		public override void DidReceiveMemoryWarning ()
-		{
-			// Releases the view if it doesn't have a superview.
-			base.DidReceiveMemoryWarning();
-
-			// Release any cached data, images, etc that aren't in use.
-		}
-
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 
-			var tableView = new UITableView (new RectangleF (0, 0, 320, 560), UITableViewStyle.Plain);
+			var tableView = new UITableView (new CGRect (0, 0, 320, 560), UITableViewStyle.Plain);
 
 			Add (tableView);
 

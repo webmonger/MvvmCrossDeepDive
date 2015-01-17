@@ -1,8 +1,8 @@
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.ObjCRuntime;
-using MonoTouch.UIKit;
+using Foundation;
+using ObjCRuntime;
+using UIKit;
 using MvvmCrossMenu.Core.ViewModels;
 
 namespace MvvmCrossMenu.Touch.Views

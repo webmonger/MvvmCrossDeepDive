@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectGuid>{192D6D59-84F7-4448-AB25-D723624E584F}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>MvvmCrossMenu.Touch</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -24,6 +24,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -81,6 +83,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>full</DebugType>
@@ -94,6 +97,7 @@
     <BuildIpa>true</BuildIpa>
     <CodesignProvision>Automatic:AdHoc</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>full</DebugType>
@@ -106,72 +110,58 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
+    <Reference Include="Xamarin.iOS" />
     <Reference Include="Cirrious.CrossCore.Touch">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.CrossCore.Touch.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.CrossCore.Touch.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Binding.Touch">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.CrossCore.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Binding.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Touch">
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Touch.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Touch.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.1.1\lib\MonoTouch\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache.Touch">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.DownloadCache.Touch.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.File">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.File.Touch">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO">
-      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.IO.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks">
-      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.Threading.Tasks.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Threading.Tasks">
-      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Threading.Tasks.Extensions">
-      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache.Touch">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.DownloadCache.Touch.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Color">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Color.Touch">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.1.1\lib\MonoTouch\Cirrious.MvvmCross.Plugins.Color.Touch.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.Color.Touch.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -191,7 +181,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Views\RootView.cs" />
     <Compile Include="Views\RootView.designer.cs">
@@ -207,24 +196,25 @@
     <Compile Include="Views\FirstView.designer.cs">
       <DependentUpon>FirstView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="ConstantsTouch.cs" />
-    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Helpers\MenuPresenter.cs" />
     <Compile Include="Views\TableViewCells\MenuCollectionViewCell.cs" />
     <Compile Include="Views\TableViewCells\MenuCollectionViewCell.designer.cs">
       <DependentUpon>MenuCollectionViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Views\TableViewCells\BookCell.cs" />
     <Compile Include="Views\TableViewCells\BookCell.designer.cs">
       <DependentUpon>BookCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
     <Compile Include="Views\BookInfoView.cs" />
     <Compile Include="Views\BookToColourConverter.cs" />
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Extensions\DateExtensions.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\MvvmCrossMenu.Core\MvvmCrossMenu.Core.csproj">
       <Project>{00B54BD9-609F-4BFF-9042-08DE9C4A20C1}</Project>
@@ -270,4 +260,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
 </Project>

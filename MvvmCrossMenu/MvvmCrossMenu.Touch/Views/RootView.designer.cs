@@ -1,26 +1,26 @@
-﻿using MonoTouch.Foundation;
+using Foundation;
 
 namespace MvvmCrossMenu.Touch.Views
 {
 	partial class RootView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UITextView CenterText { get; set; }
+		UIKit.UITextView CenterText { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIImageView RightArrowImage { get; set; }
+		UIKit.UIImageView RightArrowImage { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIImageView LeftArrowImage { get; set; }
+		UIKit.UIImageView LeftArrowImage { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIImageView UpArrowImage { get; set; }
+		UIKit.UIImageView UpArrowImage { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UITextView NavigateText { get; set; }
+		UIKit.UITextView NavigateText { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton NavigateButton { get; set; }
+		UIKit.UIButton NavigateButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

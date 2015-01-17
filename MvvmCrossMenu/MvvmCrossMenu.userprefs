@@ -1,0 +1,46 @@
+﻿<Properties StartupItem="MvvmCrossMenu.Touch/MvvmCrossMenu.Touch.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvvmCrossMenu.Touch/LinkerPleaseInclude.cs">
+    <Files>
+      <File FileName="MvvmCrossMenu.Touch/Helpers/MenuPresenter.cs" Line="1" Column="1" />
+      <File FileName="MvvmCrossMenu.Core/App.cs" Line="1" Column="1" />
+      <File FileName="MvvmCrossMenu.Core/ViewModels/FirstViewModel.cs" Line="1" Column="1" />
+      <File FileName="MvvmCrossMenu.Droid/Views/RootView.cs" Line="1" Column="1" />
+      <File FileName="MvvmCrossMenu.Droid/Views/Fragments/FirstView.cs" Line="1" Column="1" />
+      <File FileName="MvvmCrossMenu.Droid/Setup.cs" Line="1" Column="1" />
+      <File FileName="MvvmCrossMenu.Touch/Setup.cs" Line="1" Column="1" />
+      <File FileName="MvvmCrossMenu.Touch/Helpers/MvxSlidingPanelsTouchViewPresenter.cs" Line="10" Column="10" />
+      <File FileName="../SubModules/SlidingPanels/SlidingPanels/SlidingPanels.Lib/PanelContainers/LeftPanelContainer.cs" Line="38" Column="38" />
+      <File FileName="../SubModules/SlidingPanels/SlidingPanels/SlidingPanels.Lib/PanelContainers/PanelContainer.cs" Line="1" Column="1" />
+      <File FileName="../SubModules/SlidingPanels/SlidingPanels/SlidingPanels.Lib/PanelContainers/RightPanelContainer.cs" Line="12" Column="12" />
+      <File FileName="../SubModules/SlidingPanels/SlidingPanels/SlidingPanels.Lib/PanelContainers/BottomPanelContainer.cs" Line="7" Column="7" />
+      <File FileName="MvvmCrossMenu.Touch/Helpers/SpringFlowLayout.cs" Line="27" Column="27" />
+      <File FileName="MvvmCrossMenu.Touch/LinkerPleaseInclude.cs" Line="66" Column="66" />
+      <File FileName="MvvmCrossMenu.Touch/Theme.cs" Line="33" Column="33" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Services" expanded="True" />
+          <Node name="SubModules" expanded="True">
+            <Node name="SlidingPanels.Touch" expanded="True">
+              <Node name="PanelContainers" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="MvvmCrossMenu.Droid" expanded="True" />
+          <Node name="MvvmCrossMenu.Touch" expanded="True">
+            <Node name="Packages" expanded="True" />
+            <Node name="Helpers" expanded="True" />
+            <Node name="LinkerPleaseInclude.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../MvvmCrossMenu/MvvmCrossMenu/MvvmCrossMenu.Touch/Helpers/SpringFlowLayout.cs" line="244" offsetX="433" offsetY="3645" expression="itemFrame" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

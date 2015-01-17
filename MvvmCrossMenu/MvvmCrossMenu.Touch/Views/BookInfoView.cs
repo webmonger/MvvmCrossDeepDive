@@ -1,10 +1,10 @@
-﻿
+
 using System;
-using System.Drawing;
+using CoreGraphics;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MvvmCrossMenu.Core;
 
 namespace MvvmCrossMenu.Touch
@@ -35,21 +35,21 @@ namespace MvvmCrossMenu.Touch
 
 			View.BackgroundColor = UIColor.Green;
 
-			UIButton myButton = new UIButton (new RectangleF (200, 50, 80, 20));
+			UIButton myButton = new UIButton (new CGRect (200, 50, 80, 20));
 			myButton.SetTitle("Close", UIControlState.Normal);
 			myButton.BackgroundColor = UIColor.Black;
 //			myButton.TouchUpInside += (sender, e) => this.DismissViewController;
 			Add (myButton);
 
-			UILabel lableId = new UILabel (new RectangleF (20, 70, 280, 30));
+			UILabel lableId = new UILabel (new CGRect (20, 70, 280, 30));
 			lableId.TintColor = UIColor.Red;
 			Add (lableId);
 
-			UILabel lableTitle = new UILabel (new RectangleF (20, 100, 280, 30));
+			UILabel lableTitle = new UILabel (new CGRect (20, 100, 280, 30));
 			lableTitle.TintColor = UIColor.White;
 			Add (lableTitle);
 
-			UILabel lableAuthors = new UILabel (new RectangleF (20, 130, 280, 30));
+			UILabel lableAuthors = new UILabel (new CGRect (20, 130, 280, 30));
 			lableAuthors.TintColor = UIColor.Blue;
 			Add (lableAuthors);
 

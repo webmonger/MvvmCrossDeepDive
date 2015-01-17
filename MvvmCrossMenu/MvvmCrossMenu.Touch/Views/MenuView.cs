@@ -1,12 +1,12 @@
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
+using Foundation;
 using MvvmCrossMenu.Core.ViewModels;
 using MvvmCrossMenu.Touch.Helpers;
 using MvvmCrossMenu.Touch.Views.TableViewCells;
-using MonoTouch.UIKit;
-using System.Drawing;
+using UIKit;
+using CoreGraphics;
 
 namespace MvvmCrossMenu.Touch.Views
 {
@@ -39,7 +39,7 @@ namespace MvvmCrossMenu.Touch.Views
 			var source = new MvxCollectionViewSource (MenuCollectionView, MenuCollectionViewCell.Key);
 			MenuCollectionView.Source = source;
 			var springFlowLayout = new SpringFlowLayout ();
-			springFlowLayout.ItemSize = new SizeF(270.0f, 50.0f);
+			springFlowLayout.ItemSize = new CGSize(270.0f, 50.0f);
 			MenuCollectionView.SetCollectionViewLayout(springFlowLayout, true);
 
 			var set = this.CreateBindingSet<MenuView, MenuViewModel> ();

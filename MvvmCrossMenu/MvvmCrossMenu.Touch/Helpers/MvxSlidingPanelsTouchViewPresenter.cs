@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
-using MonoTouch.UIKit;
+using UIKit;
 using MvvmCrossMenu.Core.ViewModels;
 using SlidingPanels.Lib;
 using SlidingPanels.Lib.PanelContainers;

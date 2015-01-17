@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using System.Drawing;
+using Foundation;
+using UIKit;
+using CoreGraphics;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using MvvmCrossMenu.Touch.Views.TableViewCells;
 using Cirrious.CrossCore.Converters;

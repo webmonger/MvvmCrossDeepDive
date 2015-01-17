@@ -1,10 +1,10 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Xamarin Studio to store outlets and
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace MvvmCrossMenu.Touch.Views.TableViewCells
 {
@@ -12,13 +12,13 @@ namespace MvvmCrossMenu.Touch.Views.TableViewCells
 	partial class BookCell
 	{
 		[Outlet]
-		MonoTouch.UIKit.UILabel AuthorLabel { get; set; }
+		UIKit.UILabel AuthorLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UILabel TitleLabel { get; set; }
+		UIKit.UILabel TitleLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIImageView MainImage { get; set; }
+		UIKit.UIImageView MainImage { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{

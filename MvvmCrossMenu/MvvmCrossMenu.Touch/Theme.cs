@@ -1,4 +1,4 @@
-﻿using MonoTouch.UIKit;
+using UIKit;
 
 namespace MvvmCrossMenu.Touch
 {
@@ -19,7 +19,7 @@ namespace MvvmCrossMenu.Touch
 			var navigationBar = navController.NavigationBar;
 			navigationBar.BarTintColor = Background;
 			navigationBar.TintColor = HighLight;
-			navigationBar.SetTitleTextAttributes(new UITextAttributes() { TextColor = HighLight });
+//			navigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes() { TextColor = HighLight });
 			navigationBar.Opaque = true;
 			navigationBar.SetBackgroundImage (UIImage.FromFile ("Images/NavBar/background.png"), UIBarMetrics.Default);
 			navigationBar.Translucent = false;

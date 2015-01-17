@@ -2,7 +2,7 @@ using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
-using MonoTouch.UIKit;
+using UIKit;
 
 namespace MvvmCrossMenu.Touch
 {

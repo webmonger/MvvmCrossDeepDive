@@ -1,5 +1,6 @@
 using Cirrious.CrossCore.IoC;
 using MvvmCrossMenu.Services;
+using System.Reflection;
 
 namespace MvvmCrossMenu.Core
 {
@@ -7,7 +8,7 @@ namespace MvvmCrossMenu.Core
     {
         public override void Initialize()
         {
-			CreatableTypes(typeof(IMenuService).Assembly)
+			CreatableTypes(typeof(IMenuService).GetTypeInfo().Assembly)
 				.EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();

@@ -52,80 +52,58 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="System.Net">
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.1.1\lib\MonoAndroid\System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Xml.Serialization">
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.1.1\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.CrossCore.Droid">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoAndroid\Cirrious.CrossCore.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoAndroid\Cirrious.CrossCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Droid">
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Droid.Fragging">
-      <HintPath>..\packages\MvvmCross.HotTuna.Droid.Fragging.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.Fragging.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.1.1\lib\MonoAndroid\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\Components\xamandroidsupportv4-18-4.19.0.1\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO">
-      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.IO.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\MonoAndroid\Cirrious.CrossCore.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.Runtime.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="System.Threading.Tasks">
-      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+win8\System.Threading.Tasks.dll</HintPath>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\MonoAndroid\Cirrious.CrossCore.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Threading.Tasks">
-      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Binding.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Threading.Tasks.Extensions">
-      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Color">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Color.Droid">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Droid.Fragging">
+      <HintPath>..\packages\MvvmCross.HotTuna.Droid.Fragging.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Droid.Fragging.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DebugTrace.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
-    <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Helpers\CustomPresenter.cs" />
     <Compile Include="Views\RootView.cs" />
     <Compile Include="Helpers\CustomActionBarDrawerToggle.cs" />
-    <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="Views\Fragments\FirstView.cs" />
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,12 +113,9 @@
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\SplashScreen.axml" />
-    <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
-    <AndroidResource Include="Resources\Values\SplashStyle.xml" />
-    <AndroidResource Include="Resources\Drawable\splash.png" />
     <AndroidResource Include="Resources\Drawable\Icon.png" />
     <AndroidResource Include="Resources\Values\Strings.xml">
       <SubType>Designer</SubType>
@@ -171,6 +146,10 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Values\integers.xml" />
+    <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
+    <AndroidResource Include="Resources\values\SplashStyle.xml" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

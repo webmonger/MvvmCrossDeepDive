@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
+using CoreGraphics;
 using System.Linq;
 using System.Text;
 using Cirrious.CrossCore.Core;
-using MonoTouch.CoreAnimation;
-using MonoTouch.CoreGraphics;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreAnimation;
+using CoreGraphics;
+using Foundation;
+using UIKit;
 
 namespace MvvmCrossMenu.Touch.Helpers
 {
@@ -16,17 +16,17 @@ namespace MvvmCrossMenu.Touch.Helpers
         private List<NSIndexPath> _visibleIndexPathsSet;
         private List<NSIndexPath> _visibleHeaderAndFooterSet;
         private UIInterfaceOrientation _interfaceOrientation;
-        private float _latestDelta;
-		private const float KScrollResistanceFactorDefault = 900.0f;
+        private nfloat _latestDelta;
+		private nfloat KScrollResistanceFactorDefault = 900.0f;
 
-        public float ScrollResistanceFactor { get; set; }
+        public nfloat ScrollResistanceFactor { get; set; }
 
         public UIDynamicAnimator DynamicAnimator { get; set; }
 
         public SpringFlowLayout()
         {
 			DynamicAnimator = new UIDynamicAnimator(this);
-			ItemSize = new SizeF(250.0f, 50.0f);
+			ItemSize = new CGSize(250.0f, 50.0f);
             _visibleIndexPathsSet = new List<NSIndexPath>();
             _visibleHeaderAndFooterSet = new List<NSIndexPath>();
         }
@@ -47,7 +47,7 @@ namespace MvvmCrossMenu.Touch.Helpers
             _interfaceOrientation = UIApplication.SharedApplication.StatusBarOrientation;
 
             // Need to overflow our actual visible rect slightly to avoid flickering.
-            RectangleF visibleRect = RectangleF.Inflate(CollectionView.Bounds, +100, +100);
+            CGRect visibleRect = CGRect.Inflate(CollectionView.Bounds, +100, +100);
             
 			List<UICollectionViewLayoutAttributes> itemsInVisibleRectArray =
                 base.LayoutAttributesForElementsInRect(visibleRect).ToList();
@@ -99,13 +99,13 @@ namespace MvvmCrossMenu.Touch.Helpers
                     newlyVisibleItems.Add(indexPath);
             }
 				
-            PointF touchLocation = CollectionView.PanGestureRecognizer.LocationInView(CollectionView);
+            CGPoint touchLocation = CollectionView.PanGestureRecognizer.LocationInView(CollectionView);
 
 
             for (int i = 0; i < newlyVisibleItems.Count(); i++)
             {
                 var item = LayoutAttributesForItem(newlyVisibleItems.Skip(i).FirstOrDefault());
-				PointF center = item.Center;
+				CGPoint center = item.Center;
                 UIAttachmentBehavior springBehaviour = new UIAttachmentBehavior(item, center);
 
 				springBehaviour.Length = 1.0f;
@@ -113,13 +113,13 @@ namespace MvvmCrossMenu.Touch.Helpers
                 springBehaviour.Frequency = 1.0f;
 
                 // If our touchLocation is not (0,0), we'll need to adjust our item's center "in flight"
-                if (PointF.Empty != touchLocation)
+                if (CGPoint.Empty != touchLocation)
                 {
                     if (ScrollDirection == UICollectionViewScrollDirection.Vertical)
                     {
-                        float distanceFromTouch = touchLocation.Y - springBehaviour.AnchorPoint.Y;
+                        var distanceFromTouch = touchLocation.Y - springBehaviour.AnchorPoint.Y;
 
-                        float scrollResistance;
+                        nfloat scrollResistance;
                         if (Math.Abs(ScrollResistanceFactor) > 0.0)
                         {
                             scrollResistance = distanceFromTouch/ScrollResistanceFactor;
@@ -131,20 +131,20 @@ namespace MvvmCrossMenu.Touch.Helpers
 
                         if (_latestDelta < 0)
                         {
-                            center.Y += Math.Max(_latestDelta, _latestDelta*scrollResistance);
+							center.Y += (nfloat)Math.Max(_latestDelta, _latestDelta*scrollResistance);
                         }
                         else
                         {
-                            center.Y += Math.Min(_latestDelta, _latestDelta*scrollResistance);
+							center.Y += (nfloat)Math.Min(_latestDelta, _latestDelta*scrollResistance);
                         }
 
                         item.Center = center;
                     }
                     else
                     {
-                        float distanceFromTouch = touchLocation.X - springBehaviour.AnchorPoint.X;
+                        var distanceFromTouch = touchLocation.X - springBehaviour.AnchorPoint.X;
 
-                        float scrollResistance;
+                        nfloat scrollResistance;
                         if (Math.Abs(ScrollResistanceFactor) > 0.0)
                         {
                             scrollResistance = distanceFromTouch/ScrollResistanceFactor;
@@ -155,11 +155,11 @@ namespace MvvmCrossMenu.Touch.Helpers
                         }
                         if (_latestDelta < 0)
                         {
-                            center.X += Math.Max(_latestDelta, _latestDelta*scrollResistance);
+							center.X += (nfloat)Math.Max(_latestDelta, _latestDelta*scrollResistance);
                         }
                         else
                         {
-                            center.X += Math.Min(_latestDelta, _latestDelta*scrollResistance);
+							center.X += (nfloat)Math.Min(_latestDelta, _latestDelta*scrollResistance);
                         }
                         item.Center = center;
                     }
@@ -181,7 +181,7 @@ namespace MvvmCrossMenu.Touch.Helpers
         }
 
 
-        public override UICollectionViewLayoutAttributes[] LayoutAttributesForElementsInRect(RectangleF rect)
+        public override UICollectionViewLayoutAttributes[] LayoutAttributesForElementsInRect(CGRect rect)
 		{
 			var items = DynamicAnimator.GetDynamicItems(rect);
 			return items.Select(x => x as UICollectionViewLayoutAttributes).ToArray();
@@ -199,11 +199,11 @@ namespace MvvmCrossMenu.Touch.Helpers
             return dynamicLayoutAttributes ?? base.LayoutAttributesForItem(indexPath);
         }
 
-        public override bool ShouldInvalidateLayoutForBoundsChange(RectangleF newBounds)
+        public override bool ShouldInvalidateLayoutForBoundsChange(CGRect newBounds)
         {
             UIScrollView scrollView = CollectionView;
 
-            Single delta;
+            nfloat delta;
             if (ScrollDirection == UICollectionViewScrollDirection.Vertical)
             {
                 delta = newBounds.Y - scrollView.Bounds.Y;
@@ -214,7 +214,7 @@ namespace MvvmCrossMenu.Touch.Helpers
             }
             _latestDelta = delta;
 
-            PointF touchLocation = CollectionView.PanGestureRecognizer.LocationInView(CollectionView);
+            CGPoint touchLocation = CollectionView.PanGestureRecognizer.LocationInView(CollectionView);
 
             for (int i = 0; i < DynamicAnimator.Behaviors.Length; i++)
             {
@@ -225,25 +225,25 @@ namespace MvvmCrossMenu.Touch.Helpers
 
                 if (ScrollDirection == UICollectionViewScrollDirection.Vertical)
                 {
-                    Single distanceFromTouch = touchLocation.Y - springBehaviour.AnchorPoint.Y;
+                    nfloat distanceFromTouch = touchLocation.Y - springBehaviour.AnchorPoint.Y;
 
-                    Single scrollResistance;
+                    nfloat scrollResistance;
                     if (Math.Abs(ScrollResistanceFactor) > 0.0)
                     {
-                        scrollResistance = distanceFromTouch/ScrollResistanceFactor;
+						scrollResistance = (nfloat)distanceFromTouch/ScrollResistanceFactor;
                     }
                     else
                     {
-                        scrollResistance = distanceFromTouch/KScrollResistanceFactorDefault;
+						scrollResistance = (nfloat)distanceFromTouch/KScrollResistanceFactorDefault;
                     }
-                    PointF center = item.Center;
+                    CGPoint center = item.Center;
                     if (delta < 0)
                     {
-                        center.Y += Math.Max(delta, delta*scrollResistance);
+						center.Y += (nfloat)Math.Max(delta, delta*scrollResistance);
                     }
                     else
                     {
-                        center.Y += Math.Min(delta, delta*scrollResistance);
+						center.Y += (nfloat)Math.Min(delta, delta*scrollResistance);
                     }
 
                     item.Center = center;
@@ -252,25 +252,25 @@ namespace MvvmCrossMenu.Touch.Helpers
                 }
                 else
                 {
-                    Single distanceFromTouch = touchLocation.X - springBehaviour.AnchorPoint.X;
+                    nfloat distanceFromTouch = touchLocation.X - springBehaviour.AnchorPoint.X;
 
-                    Single scrollResistance;
+                    nfloat scrollResistance;
                     if (Math.Abs(ScrollResistanceFactor) > 0.0)
                     {
-                        scrollResistance = distanceFromTouch/ScrollResistanceFactor;
+						scrollResistance = (nfloat)distanceFromTouch/ScrollResistanceFactor;
                     }
                     else
                     {
-                        scrollResistance = distanceFromTouch/KScrollResistanceFactorDefault;
+						scrollResistance = (nfloat)distanceFromTouch/KScrollResistanceFactorDefault;
                     }
-                    PointF center = item.Center;
+                    CGPoint center = item.Center;
                     if (delta < 0)
                     {
-                        center.X += Math.Max(delta, delta*scrollResistance);
+						center.X += (nfloat)Math.Max(delta, delta*scrollResistance);
                     }
                     else
                     {
-                        center.X += Math.Min(delta, delta*scrollResistance);
+						center.X += (nfloat)Math.Min(delta, delta*scrollResistance);
                     }
 
                     item.Center = center;

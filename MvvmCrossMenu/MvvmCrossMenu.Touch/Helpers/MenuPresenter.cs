@@ -1,8 +1,8 @@
-﻿using System.Drawing;
+﻿using CoreGraphics;
 using System;
 using Cirrious.CrossCore.Exceptions;
 using Cirrious.MvvmCross.Touch.Views;
-using MonoTouch.UIKit;
+using UIKit;
 using MvvmCrossMenu.Touch.Views;
 using SlidingPanels.Lib;
 using SlidingPanels.Lib.PanelContainers;
@@ -56,7 +56,7 @@ namespace MvvmCrossMenu.Touch.Helpers
 
 		private UIBarButtonItem CreateSliderButton(string imageName, PanelType panelType)
 		{
-			UIButton button = new UIButton(new RectangleF(0, 0, 20f, 20f));
+			UIButton button = new UIButton(new CGRect(0, 0, 20f, 20f));
 //			var hamburgerMenu = new HamburgerMenu (new RectangleF(0, 0, 20f, 20f));
 //			button.Add (hamburgerMenu);
 			button.SetBackgroundImage(UIImage.FromBundle(imageName), UIControlState.Normal);
