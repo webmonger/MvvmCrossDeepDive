@@ -26,7 +26,8 @@ namespace MvvmCrossMenu.Touch.Helpers
         public SpringFlowLayout()
         {
 			DynamicAnimator = new UIDynamicAnimator(this);
-			ItemSize = new CGSize(250.0f, 50.0f);
+//			ItemSize = new CGSize(250.0f, 50.0f);
+			EstimatedItemSize = new CGSize(250.0f, 50.0f);
             _visibleIndexPathsSet = new List<NSIndexPath>();
             _visibleHeaderAndFooterSet = new List<NSIndexPath>();
         }
@@ -200,87 +201,84 @@ namespace MvvmCrossMenu.Touch.Helpers
         }
 
         public override bool ShouldInvalidateLayoutForBoundsChange(CGRect newBounds)
-        {
-            UIScrollView scrollView = CollectionView;
+		{
+			try {
+				UIScrollView scrollView = CollectionView;
 
-            nfloat delta;
-            if (ScrollDirection == UICollectionViewScrollDirection.Vertical)
-            {
-                delta = newBounds.Y - scrollView.Bounds.Y;
-            }
-            else
-            {
-                delta = newBounds.X - scrollView.Bounds.X;
-            }
-            _latestDelta = delta;
+				nfloat delta;
+				if (ScrollDirection == UICollectionViewScrollDirection.Vertical) {
+					delta = newBounds.Y - scrollView.Bounds.Y;
+				} else {
+					delta = newBounds.X - scrollView.Bounds.X;
+				}
+				_latestDelta = delta;
 
-            CGPoint touchLocation = CollectionView.PanGestureRecognizer.LocationInView(CollectionView);
+				CGPoint touchLocation = CollectionView.PanGestureRecognizer.LocationInView (CollectionView);
 
-            for (int i = 0; i < DynamicAnimator.Behaviors.Length; i++)
-            {
-				UIAttachmentBehavior springBehaviour = DynamicAnimator.Behaviors[i] as UIAttachmentBehavior;
+				for (int i = 0; i < DynamicAnimator.Behaviors.Length; i++) {
+					if (DynamicAnimator.Behaviors [i] == null) {
+						int xx = 322;
+					}
 
-				UICollectionViewLayoutAttributes item =
-					springBehaviour.Items.FirstOrDefault() as UICollectionViewLayoutAttributes;
 
-                if (ScrollDirection == UICollectionViewScrollDirection.Vertical)
-                {
-                    nfloat distanceFromTouch = touchLocation.Y - springBehaviour.AnchorPoint.Y;
+					UIAttachmentBehavior springBehaviour = DynamicAnimator.Behaviors [i] as UIAttachmentBehavior;
 
-                    nfloat scrollResistance;
-                    if (Math.Abs(ScrollResistanceFactor) > 0.0)
-                    {
-						scrollResistance = (nfloat)distanceFromTouch/ScrollResistanceFactor;
-                    }
-                    else
-                    {
-						scrollResistance = (nfloat)distanceFromTouch/KScrollResistanceFactorDefault;
-                    }
-                    CGPoint center = item.Center;
-                    if (delta < 0)
-                    {
-						center.Y += (nfloat)Math.Max(delta, delta*scrollResistance);
-                    }
-                    else
-                    {
-						center.Y += (nfloat)Math.Min(delta, delta*scrollResistance);
-                    }
+					if (springBehaviour.Items == null) {
+						int xx = 23;
+					}
 
-                    item.Center = center;
+					UICollectionViewLayoutAttributes item =
+						springBehaviour.Items.FirstOrDefault () as UICollectionViewLayoutAttributes;
 
-                    DynamicAnimator.UpdateItemUsingCurrentState(item);
-                }
-                else
-                {
-                    nfloat distanceFromTouch = touchLocation.X - springBehaviour.AnchorPoint.X;
+					if (item == null)
+						return false;
 
-                    nfloat scrollResistance;
-                    if (Math.Abs(ScrollResistanceFactor) > 0.0)
-                    {
-						scrollResistance = (nfloat)distanceFromTouch/ScrollResistanceFactor;
-                    }
-                    else
-                    {
-						scrollResistance = (nfloat)distanceFromTouch/KScrollResistanceFactorDefault;
-                    }
-                    CGPoint center = item.Center;
-                    if (delta < 0)
-                    {
-						center.X += (nfloat)Math.Max(delta, delta*scrollResistance);
-                    }
-                    else
-                    {
-						center.X += (nfloat)Math.Min(delta, delta*scrollResistance);
-                    }
+					if (ScrollDirection == UICollectionViewScrollDirection.Vertical) {
+						float distanceFromTouch = Convert.ToSingle (touchLocation.Y - springBehaviour.AnchorPoint.Y);
 
-                    item.Center = center;
+						float scrollResistance;
+						if (Math.Abs (ScrollResistanceFactor) > 0.0) {
+							scrollResistance = Convert.ToSingle (distanceFromTouch / ScrollResistanceFactor);
+						} else {
+							scrollResistance = Convert.ToSingle (distanceFromTouch / KScrollResistanceFactorDefault);
+						}
+						CGPoint center = item.Center;
+						if (delta < 0) {
+							center.Y += (float)Math.Max (delta, delta * scrollResistance);
+						} else {
+							center.Y += (float)Math.Min (delta, delta * scrollResistance);
+						}
 
-                    DynamicAnimator.UpdateItemUsingCurrentState(item);
-                }
-            }
+						item.Center = center;
 
-            return false;
-        }
+						DynamicAnimator.UpdateItemUsingCurrentState (item);
+					} else {
+						nfloat distanceFromTouch = touchLocation.X - springBehaviour.AnchorPoint.X;
+
+						nfloat scrollResistance;
+						if (Math.Abs (ScrollResistanceFactor) > 0.0) {
+							scrollResistance = (nfloat)distanceFromTouch / ScrollResistanceFactor;
+						} else {
+							scrollResistance = (nfloat)distanceFromTouch / KScrollResistanceFactorDefault;
+						}
+						CGPoint center = item.Center;
+						if (delta < 0) {
+							center.X += (nfloat)Math.Max (delta, delta * scrollResistance);
+						} else {
+							center.X += (nfloat)Math.Min (delta, delta * scrollResistance);
+						}
+
+						item.Center = center;
+
+						DynamicAnimator.UpdateItemUsingCurrentState (item);
+					}
+				}
+			} catch (Exception ex) {
+				return false;
+			}
+
+			return false;
+		}
 
         public override void PrepareForCollectionViewUpdates(UICollectionViewUpdateItem[] updateItems)
         {

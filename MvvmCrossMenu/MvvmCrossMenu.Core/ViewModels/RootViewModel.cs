@@ -42,6 +42,8 @@ namespace MvvmCrossMenu.Core.ViewModels
 		{
 			_menuService = menuService;
 			MenuItems = _menuService.GetMenuItems ();
+			// Get the right view
+			ShowViewModel<FirstViewModel> ();
 		}
 
 		public Type GetSectionForViewModelType(MenuType type)

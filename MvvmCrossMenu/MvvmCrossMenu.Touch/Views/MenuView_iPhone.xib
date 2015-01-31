@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuView">
@@ -15,9 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="250" height="460"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" id="HMn-BG-Au1">
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HMn-BG-Au1">
                     <rect key="frame" x="0.0" y="64" width="250" height="396"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kch-Ba-9m1">
                         <size key="itemSize" width="250" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,8 +30,18 @@
             <accessibility key="accessibilityConfiguration">
                 <accessibilityTraits key="traits" none="YES" selected="YES"/>
             </accessibility>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HMn-BG-Au1" secondAttribute="bottom" id="49G-cb-RGN"/>
+                <constraint firstAttribute="trailing" secondItem="HMn-BG-Au1" secondAttribute="trailing" id="dOI-Qc-9lj"/>
+                <constraint firstItem="HMn-BG-Au1" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="ezN-rK-stm"/>
+                <constraint firstItem="HMn-BG-Au1" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="nV6-15-GRi"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

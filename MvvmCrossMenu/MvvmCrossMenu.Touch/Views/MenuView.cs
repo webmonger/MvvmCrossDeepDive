@@ -23,14 +23,6 @@ namespace MvvmCrossMenu.Touch.Views
 			set{ ViewModel = value; }
 		}
 
-		public override void DidReceiveMemoryWarning ()
-		{
-			// Releases the view if it doesn't have a superview.
-			base.DidReceiveMemoryWarning();
-
-			// Release any cached data, images, etc that aren't in use.
-		}
-
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad();
@@ -39,8 +31,8 @@ namespace MvvmCrossMenu.Touch.Views
 			var source = new MvxCollectionViewSource (MenuCollectionView, MenuCollectionViewCell.Key);
 			MenuCollectionView.Source = source;
 			var springFlowLayout = new SpringFlowLayout ();
-			springFlowLayout.ItemSize = new CGSize(270.0f, 50.0f);
-			MenuCollectionView.SetCollectionViewLayout(springFlowLayout, true);
+//			springFlowLayout.ItemSize = new CGSize(270.0f, 50.0f);
+//			MenuCollectionView.SetCollectionViewLayout(springFlowLayout, true);
 
 			var set = this.CreateBindingSet<MenuView, MenuViewModel> ();
 			set.Bind (source).To (vm => vm.MenuItems);
@@ -57,11 +49,11 @@ namespace MvvmCrossMenu.Touch.Views
 			ReleaseDesignerOutlets ();
 		}
 
-		static UIImage FromUrl (string uri)
-		{
-			using (var url = new NSUrl (uri))
-			using (var data = NSData.FromUrl (url))
-				return UIImage.LoadFromData (data);
-		}
+//		static UIImage FromUrl (string uri)
+//		{
+//			using (var url = new NSUrl (uri))
+//			using (var data = NSData.FromUrl (url))
+//				return UIImage.LoadFromData (data);
+//		}
     }
 }

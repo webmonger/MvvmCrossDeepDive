@@ -27,6 +27,7 @@ namespace MvvmCrossMenu.Touch.Views.TableViewCells
 				set.Bind(Title).To(vm => vm.Title);
 				set.Apply ();
 			});
+			this.TranslatesAutoresizingMaskIntoConstraints = true;
 		}
 
 		public static MenuCollectionViewCell Create ()
